@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/test.dart';
 import 'package:get/get.dart';
+import 'package:flutter_application_2/test.dart';
+import 'package:flutter_application_2/menuutama.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,15 +12,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(CounterContoler());
-
-    return GetMaterialApp(
-      title: 'Flutter Demo',
-      home: Scaffold(
-        body: Center(
-          child: Obx(() => Text('${controller.count}')),
-        ),
-      ),
+    return MaterialApp(
+      title: 'Flutter Application 2',
+      home: const MenuUtama(),
     );
   }
 }
